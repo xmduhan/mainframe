@@ -1,6 +1,4 @@
-*pyc
+*.pyc
 .ipynb_checkpoints/
 .python-version
-static/
-templates/
-AdminLTE/
+mainframe/AdminLTE/
