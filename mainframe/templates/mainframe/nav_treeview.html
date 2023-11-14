@@ -1,0 +1,23 @@
+{% load util %}
+<li class="nav-item {% if stauts %}menu-open{% endif %}">
+ <a class="nav-link active" href="#">
+	<i class="nav-icon bi bi-speedometer">
+	</i>
+	<p>
+		{{ name }}
+	 <i class="nav-arrow bi bi-chevron-right">
+	 </i>
+	</p>
+ </a>
+ <ul class="nav nav-treeview">
+	{% for key, value in data.items %}
+		{% if value|get_type == "str" %}
+			{% include "mainframe/nav_item.html" with name=key href=value %}
+		{% elif  value|get_type == "dict" %}
+			{% include "mainframe/nav_treeview.html" with name=key data=value %}
+		{% else %}
+		<div>Unknown Menu Type: {{ value|get_type }}</div>
+		{% endif %}	
+	{% endfor %}
+ </ul>
+</li>
