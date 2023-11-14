@@ -9,7 +9,7 @@ from django.template import loader
 def index(request):
     """ """
     context = {}
-    template = loader.get_template("mainframe/main.html")
+    template = loader.get_template("mainframe/index.html")
     return HttpResponse(template.render(context, request))
 
 
