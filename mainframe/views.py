@@ -9,11 +9,11 @@ from django.template import loader
 def index(request):
     """ """
     treeview_data = {
-        'a': {'a1': 'a1', 'a2': 'a2', 'a3': 'a3'},
-        'b': {'b1': 'b1', 'b2': 'b2', 'b3': 'b3'},
+        'a': {'a1': '/admin', 'a2': '/admin', 'a3': 'http://127.0.0.1:8000/admin'},
+        'b': {'b1': 'http://134.134.34.71/browser/', 'b2': 'http://134.134.34.72/dc/nbrender/render/html/examples/cube_report.ipynb', 'b3': 'b3'},
         'c': {'c1': 'c1', 'c2': 'c2', 'c3': 'c3'},
-        'd': 'd',
-        'e': 'e',
+        'd': 'http://127.0.0.1:8000/admin/login/?next=/admin/',
+        'e': 'http://127.0.0.1:8000/static/mainframe/dist/img/user2-160x160.jpg',
         'f': 'f',
     }
     context = {'treeview_data': treeview_data}

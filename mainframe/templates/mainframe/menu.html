@@ -1,0 +1,10 @@
+{% load util %}
+{% for key, value in treeview_data.items %}
+    {% if value|get_type == "str" %}
+        {% include "mainframe/nav_item.html" with name=key href=value %}
+    {% elif  value|get_type == "dict" %}
+        {% include "mainframe/nav_treeview.html" with name=key data=value %}
+    {% else %}
+        <div>Unknown Menu Type: {{ value|get_type }}</div>
+    {% endif %} 
+{% endfor %}
