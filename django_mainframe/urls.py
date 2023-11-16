@@ -22,5 +22,5 @@ admin.site.enable_nav_sidebar = False
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mainframe/', include('mainframe.urls')),
+    path('dc/mainframe/', include('mainframe.urls')),
 ]
